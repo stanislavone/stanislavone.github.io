@@ -1,3 +1,5 @@
+//Поиск в массиве
+
 var arr = ['a', 'b', 'c', 'd'];
 function findArr(symb){
     while(true) {
