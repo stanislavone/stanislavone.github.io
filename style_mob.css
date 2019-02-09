@@ -1,0 +1,106 @@
+/* smartphones stle */
+
+body {
+    font-family: Georgia;
+    font-size: 16px;
+    max-width: 100%; 
+    margin: 0 auto;
+   background-color: #d0d0cd;
+  }
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+
+  }
+
+p {
+      margin-bottom: 0px;
+  }
+  
+#soc {
+	font-size: 20px;
+	}
+
+
+#header {
+      margin-bottom: 0px;
+      text-align: center;
+      padding-bottom: 1px;
+      width: 100%;
+      line-height: 7px;
+    font-size: 20px;
+  
+}
+
+#main {
+      font-size: 20px;
+      padding: 0px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0px;
+      background-color: rgba(255,255,255,.46);
+      border-radius: 5px, 5px, 5px, 5px;    
+  }
+
+#footer {
+      margin-top: 6px;
+      text-align: center;
+  }
+  
+
+
+h1 {
+      font-size: 20px;
+      font-weight: 400px;
+      margin-bottom: 0px;
+  }
+
+h2 {
+      font-size: 32px;
+      font-weight: 400px;
+      margin-bottom: 0px;
+  }
+
+h3 {
+      font-size: 20px;
+      font-weight: 400px;
+      margin-bottom: 0px;
+  }
+
+
+.scalemaxmin:hover {
+    text-align: center;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    background-color: rgba(214, 205, 205, 0.651);
+
+  }
+
+#center {
+      text-align: left;
+      font-size: 130%;
+
+  }
+
+#conteiner {
+      background: linear-gradient(111deg, #db50ff 0.0%, #7b0fac 100.0%, #fea9ff 100.0%);
+      margin-bottom: 0px;
+      padding-left: 10px;
+      border-radius: 0px 0px 0 0;
+
+  }
+
+#post {
+      background-color: rgba(255,255,255,.46);
+      padding-left: 10px;
+      border-radius: 0px 0px 0px 0px;
+      font-weight: bold;
+      line-height: 15px;
+      padding-bottom: 10px;
+  }
+
