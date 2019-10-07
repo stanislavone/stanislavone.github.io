@@ -16,6 +16,7 @@ $(document).ready(function() {
     }
 
     var arr = [];
+
   var anim;
     function makeCounter() {
       var count = 0;
@@ -41,7 +42,8 @@ $(document).ready(function() {
       let cntr = 0;
       var add;
       arr.push(tt);
-      localStorage.setItem(arr, JSON.stringify(arr));
+      localStorage.setItem("arr", JSON.stringify(arr));
+
 
 
       $.each(arr, function(index, value) {
@@ -64,8 +66,9 @@ $(document).ready(function() {
     $("body").on("click", ".del", function() {
       $(this).parent()
       .remove();
+      var id = $(this).attr("id");
       arr.splice($(this).attr("id"), 1);
-      localStorage.removeItem($(this).attr("id"));
+      localStorage.removeItem('arr'+[id]);
       $(".del").each(function() {
         $(this).attr("id", countLi);
       })
@@ -74,15 +77,15 @@ $(document).ready(function() {
 
 
       let str = '';
-      function localValue() {
-      for(let i = 0; i < localStorage.length; i++) {
-          return JSON.parse(localStorage.getItem(localStorage.key(i)));
-      }
-    }
+      var outArr = [];
+      outArr = JSON.parse(localStorage.getItem('arr'));
+      $.each(outArr, function(index, value) {
+        $(".list-group").append("<li class='list-group-item'>"+value+"<button class='btn btn-sm close del' id='"+ countLi + "'>X</button></li>");
+      })
 
-    for(let i = 0; i < localStorage.length; i++) {
-    $(".list-group").append("<li class='list-group-item'>"+localValue(i)+"</li>");
-}
+
+
+// njf8uj8bgvj8gbj0u89jvgj8io fvifv89vjf7dfthrvfl9f9igfu90kb98fg90f0o9i09d9f--p[v-olovgb0-0f0pvl99fp[bfdp-d0k8ujj'][]]
 
 
 
