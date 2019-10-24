@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="screen and (min-width: 320px)" href="style-320px.css">
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+    
+  </head>
+  <style>
+       @media (min-width: 1200px) {
+      .jumbotron {
+        width: 800px;
+        margin-top: 10px;
+        height: 320px;
+      }
+      .medium {
+        width: 150px;
+        height: 60px;      
+        font-size: 30px;  
+      }
+      .high {
+        margin-left: 20px;
+        width: 150px;
+        height: 60px;
+        font-size: 30px;
+      }
+      .flex-row {
+        margin-top: 10px;
+      }
+      .blockquote {
+        font-size: 30px;
+      }
+    }
+
+    </style>
+  <body>
+  <div class="d-flex justify-content-center">
+  <div class="jumbotron">
+    <h1 class="display-4">pa5sw0rd?</h1><br>
+    <div class='flex-row'>
+    <button class="btn btn-warning medium">Medium</button>
+    <button class="btn btn-danger high">High</button>
+</div>
+<blockquote class="blockquote text-right">
+  <footer class="blockquote-footer">create by <a href="s4day88.beget.tech">Stanislav Druzhinin</a></footer>
+  </blockquote>
+  </div>
+  <div class="content"></div>
+     </div>
+  <script>
+   $(document).ready(function()
+{
+    let id_product = 321;
+    let qty_product = 2;
+ 
+    $.ajax({ 
+ 
+      url: "ajax.php", 
+    // dataType: "json", // Для использования JSON формата получаемых данных
+        method: "GET", // Что бы воспользоваться POST методом, меняем данную строку на POST   
+      data: {"id_product": id_product,"qty_product": qty_product},
+        success: function(data) {
+      
+    console.log(data); // Возвращаемые данные выводим в консоль
+       } 
+ });
+}); 
+  </script>
+   </body>
+</html>
