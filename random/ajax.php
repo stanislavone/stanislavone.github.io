@@ -1,9 +1,9 @@
 <?php 
-echo "<pre>";
+/*echo "<pre>";
 echo $_GET;
 echo $_POST;
 print_r($_GET);
-print_r($_POST);
+print_r($_POST); */
 
 /*$data_json = json_encode($_GET, JSON_UNESCAPED_UNICODE);
 echo $data_json;*/
@@ -16,5 +16,5 @@ echo $data_json;
 /*$data_json = json_encode($_GET, JSON_UNESCAPED_UNICODE);
 echo $data_json;
 */
-"</pre>";
+ # "</pre>"; 
 ?>
