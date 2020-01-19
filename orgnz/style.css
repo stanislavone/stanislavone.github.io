@@ -1,0 +1,33 @@
+.item {
+  background-color: 0;
+}
+.del {
+  padding-right: 0px;
+}
+
+.swal-button {
+  padding: 7px 7px 4px 4px;
+  border-radius: 2px;
+  width: 257px;
+  background-color: #4962B3;
+  font-size: 12px;
+  border: 1px solid #3e549a;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swal-text {
+  font-size: 16px;
+  position: initial;
+  float: none;
+  line-height: normal;
+  vertical-align: top;
+  text-align: left;
+  display: initial;
+  margin: 0;
+  padding: 0 10px;
+  font-weight: 400;
+  color: rgba(0,0,0,.64);
+  max-width: calc(100% - 20px);
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
