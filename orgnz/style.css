@@ -1,0 +1,114 @@
+
+
+.del {
+  padding-right: 0p; 
+}
+
+.swal-title {
+    margin-bottom: 24px;
+}
+
+.swal-icon--info:after {
+    width: 6px;
+    height: 7px;
+    border-radius: 50%;
+    margin-left: -3px;
+    top: 33px;
+    background-color: rgb(117, 192, 19);
+}
+
+.swal-icon--info:before {
+    width: 6px;
+    height: 21px;
+    bottom: 17px;
+    border-radius: 3px;
+    margin-left: -3px;
+    background-color: rgb(117, 192, 19);
+}
+
+.swal-icon {
+    width: 47px;
+    height: 44px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    box-sizing: content-box;
+    margin: 20px auto;
+    border-color: rgb(117, 192, 19);
+}
+
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	position: relative;
+	min-height: 100%;
+}
+.content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+  
+    height: 500px;
+    overflow: auto;
+    margin-top: 0px;
+}
+.footer {
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 -5px 5px -5px rgba(0,0,0,.44);
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+    width: 100%;
+    margin-left: 0px;
+}
+.footer > input[type=text] {
+    height: 40px;
+    width: 350px;
+	font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    background: #d9d9d9;
+    font-weight: bold;
+    
+}
+
+.footer > input[type=text]:focus {
+	font-size: 13px;
+    opacity: 0.5;
+    border: none;
+    box-shadow: none;
+    color: black!important;
+}
+
+.footer > .form-control {
+    color: black!important;
+}
+
+.footer > input:focus::-webkit-input-placeholder { opacity: 0; }
+.footer > input:-moz-placeholder           { opacity: 0; }
+.footer > input::-moz-placeholder          { opacity: 0; }
+.footer > input:-ms-input-placeholder      { opacity: 0; } 
+
+.footer > input[type=button] {
+	font-size: 13px;
+    height: 40px;
+    width: 350px;
+    border: none;
+    margin-top: 2px;
+    border-radius: 6px;
+    background: #d9d9d9;
+    font-weight: bold;
+}
+  
+:focus {
+    outline: none;
+}
+
