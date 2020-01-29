@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <meta charset="utf-8">
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        font: Arial 14px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css"/>
+    <script defer  src="index.js"></script>
+  </head>
+  <body>
+    <div class="header">
+    <div class="form">
+    <input type="text" id="phrase" placeholder="text">
+    <input type="text" id="url" placeholder="url" disabled>
+      </div>
+    <div class="file">
+    <input type="file" id="file">
+    <label for="file" onchange="readFile(this)">Выбрать файл</label>
+  </div>
+    <div class="button">
+    <button id="btn">search</button>
+      </div>
+      </div>
+    <div class="content">
+      <h3>Вывод:</h3>
+    <p id="output"></p>
+      </div>
+  </body>
+</html>
