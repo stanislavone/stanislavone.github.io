@@ -3,41 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-    <title>Document API</title>
-    <style>
-        img {
-            margin: 2px;
-            
-        }
-    </style>
+    <title>Document INDEX VK API</title>
 </head>
 <body>
-    <h4>Ширина</h4>
-    <input type="number" id="shr"><br>
-    <h4>Долгота</h4>
-    <input type="number" id="dg"><br>
-    <h4>Радиус</h4>
-    <input type="number" id="radius"><br>
-    <h4>Количество</h4>
-    <input type="number" id="count"><br>
-    <button id="search">Найти</button>
-
-    <div id="result">
-        <details></details>
-    </div>
-    <script>
-        $.ajax({
-            url: 'https://api.vk.com/method/photos.search?count=200&lat=56.643706&long=61.242229&radius=100&access_token=34436663a2bc7dc006143f9643e04830a87bcae7d9ed74432689875a12170bd4474ac0c94e1d5a272a777&v=5.52',
-            method: 'GET',
-            dataType: 'JSONP',
-            success: function(data) {
-                console.log(data);
-                for(let i = 0; i < data.response.items.length; i++) {
-                    $("#result details").append('<img src='+data.response.items[i].photo_130+'>'); //604
-                }
-            }
-        })
-    </script>
+    <a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>
 </body>
 </html>
