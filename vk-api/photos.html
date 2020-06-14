@@ -35,13 +35,13 @@
     .reduce(
         function(p,e){
             var a = e.split('=');
-            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+            p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
             return p;
         },
         {}
     );
 
-console.log( params['access_token']);
+console.log( params['user_id']);
         /*$.ajax({
             url: 'https://api.vk.com/method/photos.search?count=200&lat=56.643706&long=61.242229&radius=100&access_token=34436663a2bc7dc006143f9643e04830a87bcae7d9ed74432689875a12170bd4474ac0c94e1d5a272a777&v=5.52',
             method: 'GET',
