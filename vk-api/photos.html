@@ -29,8 +29,8 @@
     <script>
       let hsh = location.hash.substring(14, 99);
       console.log(hsh);
-        /*$.ajax({
-            url: 'https://api.vk.com/method/photos.search?count=200&lat=56.643706&long=61.242229&radius=100&access_token=34436663a2bc7dc006143f9643e04830a87bcae7d9ed74432689875a12170bd4474ac0c94e1d5a272a777&v=5.52',
+        $.ajax({
+            url: 'https://api.vk.com/method/photos.search?count=200&lat=56.643706&long=61.242229&radius=100&access_token='+hsh+'&v=5.52',
             method: 'GET',
             dataType: 'JSONP',
             success: function(data) {
@@ -39,7 +39,7 @@
                     $("#result details").append('<img src='+data.response.items[i].photo_130+'>'); //604
                 }
             }
-        }) */
+        }) 
 
     </script>
 </body>
