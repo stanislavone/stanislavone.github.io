@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document INDEX VK API</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <title>Document VK API</title>
+    <style>
+        img {
+            margin: 2px;
+            
+        }
+    </style>
 </head>
 <body>
-    <a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/photos.html&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>
+    <div class="reg">
+        <h1 class="textReg"></h1>
+    </div>
+    <script>
+        let hsh = location.hash //substring(14, 99);
+        if(!hsh) {
+        $('.reg > .textReg').html('<a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/photos.html&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>');
+        }
+    </script>
+    <h4>Ширина</h4>
+    <input type="number" id="shr"><br>
+    <h4>Долгота</h4>
+    <input type="number" id="dg"><br>
+    <h4>Радиус</h4>
+    <input type="number" id="radius"><br>
+    <h4>Количество</h4>
+    <input type="number" id="count"><br>
+    <button id="search">Найти</button>
+
+    
+    <script>
+        let shr = $('#shr').val();
+        let dg = $('#dg').val();
+        let rd = $('#radius').val();
+        let kol = $('#count').val();
+        
+      
+      
+
+    </script>
 </body>
 </html>
