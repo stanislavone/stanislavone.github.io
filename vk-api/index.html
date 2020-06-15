@@ -39,9 +39,16 @@
         let rd = $('#radius').val();
         let kol = $('#count').val();
         
-      
-      
-
+        $('button').click(function() {
+            $.ajax({
+                url: 'stanislavone.github.io/vk-api/photos_list.html',
+                method: 'GET',
+                data: { hash: hsh, shr: shr, dg: dg, rd: rd, kol: kol },
+                success: function(data) {
+                    console.log('data send' + data);
+                }
+            })
+        })    
     </script>
 </body>
 </html>
