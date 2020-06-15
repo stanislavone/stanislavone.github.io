@@ -20,6 +20,8 @@
         let hsh = location.hash //substring(14, 99);
         if(!hsh) {
         $('.reg > .textReg').html('<a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>');
+        } else {
+            let hshSub = location.hash.substring(14, 99);
         }
     </script>
     <h4>Ширина</h4>
@@ -40,10 +42,14 @@
         let kol = $('#count').val();
         
         $('#search').click(function() {
+            let shr = $('#shr').val();
+            let dg = $('#dg').val();
+            let rd = $('#radius').val();
+            let kol = $('#count').val();
             $.ajax({
                 url: 'stanislavone.github.io/vk-api/photos_list.html',
                 method: 'GET',
-                data: { hash: hsh, shr: shr, dg: dg, rd: rd, kol: kol },
+                data: { hash: hshSub, shr: shr, dg: dg, rd: rd, kol: kol },
                 success: function(data) {
                     console.log('data send' + data);
                 }
