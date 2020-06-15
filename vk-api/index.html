@@ -18,10 +18,10 @@
     </div>
     <script>
         let hsh = location.hash //substring(14, 99);
-        if(!hsh) {
-        $('.reg > .textReg').html('<a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>');
+        if(hsh) {
+            let hshSub = location.hash.substring(14, 99);    
         } else {
-            let hshSub = location.hash.substring(14, 99);
+            $('.reg > .textReg').html('<a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>');
         }
     </script>
     <h4>Ширина</h4>
