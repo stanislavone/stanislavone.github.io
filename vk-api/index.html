@@ -21,7 +21,13 @@
     <script>
         let hsh = location.hash //substring(14, 99);
         if(hsh) {
-            
+          $('.reg > .textReg').html(`
+              <div class="form-group">
+              <label class="col-md-4 control-label" for="authorize"></label>
+              <div class="col-md-8">
+              <button id="authorize" name="authorize" class="btn btn-danger" 
+              href="stanislavone.github.io/vk-api/index.html">
+              Выйти</button>`);
         } else {
             $('.reg > .textReg').html(`
               <div class="form-group">
@@ -36,7 +42,7 @@
         <form class="form-horizontal">
 <fieldset> 
 
-<!-- Button (Double) -->
+<!-- Button (Double) 
 <div class="form-group">
   <label class="col-md-4 control-label" for="authorize"></label>
   <div class="col-md-8">
@@ -44,7 +50,7 @@
     <button id="quit" name="quit" class="btn btn-danger">Выйти</button>
   </div>
 </div>
-
+-->
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="dolgota">Долгота</label>  
@@ -91,18 +97,6 @@
 
 </fieldset>
 </form>
-
-    
-    <h4>Ширина</h4>
-    <input type="number" id="shr"><br>
-    <h4>Долгота</h4>
-    <input type="number" id="dg"><br>
-    <h4>Радиус</h4>
-    <input type="number" id="radius"><br>
-    <h4>Количество</h4>
-    <input type="number" id="count"><br>
-    <button type="button" id="search">Найти</button>
-
     
     <script>
         
@@ -114,7 +108,7 @@
             $.ajax({
                 url: '/photos_list.html',
                 method: 'GET',
-                data: { hash: hshSub, shr: shr, dg: dg, rd: rd, kol: kol },
+                data: { hash: hshSub, shr: shirota, dg: dolgota, rd: radius, kol: count, },
                 success: function(data) {
                     console.log('data send' + data);
                 }
