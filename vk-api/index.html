@@ -21,17 +21,20 @@
     <script>
         let hsh = location.hash //substring(14, 99);
         if(hsh) {
-            let hshSub = location.hash.substring(14, 99);    
+            
         } else {
-            $('.reg > .textReg').html('<a href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">Autorization!!!!!</a>');
+            $('.reg > .textReg').html(`
+              <div class="form-group">
+              <label class="col-md-4 control-label" for="authorize"></label>
+              <div class="col-md-8">
+              <button id="authorize" name="authorize" class="btn btn-success 
+              href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">
+              Войти</button>`);
         }
     </script>
     
         <form class="form-horizontal">
 <fieldset> 
-
-<!-- Form Name -->
-<legend>Form Name</legend>
 
 <!-- Button (Double) -->
 <div class="form-group">
