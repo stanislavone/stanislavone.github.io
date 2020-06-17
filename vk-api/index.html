@@ -19,7 +19,6 @@
         <h1 class="textReg"></h1>
     </div>
     <script>
-      let hrefAuth = document.location.href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token";
         let hsh = location.hash //substring(14, 99);
         if(hsh) {
           $('.reg > .textReg').html(`
@@ -30,8 +29,16 @@
               <button id="authorize" name="authorize" class="btn btn-danger">
               Выйти</button></form>`);
         } else {
-            $('.reg > .textReg').html('<div class="form-group"><label class="col-md-4 control-label" for="authorize"></label><div class="col-md-8"><button onclick="'+hrefAuth+'class="btn btn-success">Войти</button></form');
+            $('.reg > .textReg').html(`
+              <div class="form-group">
+              <label class="col-md-4 control-label" for="authorize"></label>
+              <div class="col-md-8">
+              <button id="authorize" name="authorize" class="btn btn-success">
+              Войти</button></form`);
         }
+        $("button > #authorize").click(function() {
+          document.location.href = "https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token";
+        })
     </script>
     
         <form class="form-horizontal">
@@ -97,7 +104,7 @@
         
         $('#search').click(function() {
             let shr = $('#shirota').val();
-            let dg = $('#dolgota').val();
+            let dg = $('#dolg').val();
             let rd = $('#radius').val();
             let kol = $('#count').val();
             $.ajax({
