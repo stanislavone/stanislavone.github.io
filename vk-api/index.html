@@ -25,17 +25,17 @@
               <div class="form-group">
               <label class="col-md-4 control-label" for="authorize"></label>
               <div class="col-md-8">
-              <button id="authorize" name="authorize" class="btn btn-danger" 
-              href="stanislavone.github.io/vk-api/index.html">
-              Выйти</button>`);
+              <form action="stanislavone.github.io/vk-api/index.html"
+              <button id="authorize" name="authorize" class="btn btn-danger">
+              Выйти</button></form>`);
         } else {
             $('.reg > .textReg').html(`
               <div class="form-group">
               <label class="col-md-4 control-label" for="authorize"></label>
               <div class="col-md-8">
-              <button id="authorize" name="authorize" class="btn btn-success" 
-              href="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">
-              Войти</button>`);
+              <form action="https://oauth.vk.com/authorize?client_id=7506667&redirect_uri=stanislavone.github.io/vk-api/index.html&display=page&scope=freinds,photos&response_type=token">
+              <button id="authorize" name="authorize" class="btn btn-success">
+              Войти</button></form`);
         }
     </script>
     
@@ -101,8 +101,8 @@
     <script>
         
         $('#search').click(function() {
-            let shr = $('#shr').val();
-            let dg = $('#dg').val();
+            let shr = $('#shirota').val();
+            let dg = $('#dolgota').val();
             let rd = $('#radius').val();
             let kol = $('#count').val();
             $.ajax({
