@@ -1,0 +1,79 @@
+$("#rss-feeds").rss(
+  "http://feeds.feedburner.com/premiumpixels",
+  {
+    // Сколько записей отображать
+    // по умолчанию: 4
+    // тип: integer
+    limit: 10,
+
+    // смещение отображения результата
+    // по умолчанию: false
+    // тип: integer
+    offsetStart: false, // начальаная точка смещения
+    offsetEnd: false, // конечная точка смещения
+
+    // выполнять запрос через https
+    // по умолчанию: false
+    // тип: false, true
+    ssl: true,
+
+    // через какой сервис парсить RSS
+
+    
+    // сервис реализован здесь: https://github.com/sdepold/feedr
+    // по умолчанию: feedrapp.info
+    // тип: string
+    host: 'my-own-feedr-instance.com',
+
+    // внешний шаблон html
+    // по умолчанию: "<ul>{entries}</ul>"
+    // тип: string
+    layoutTemplate: "<div class='feed-container'>{entries}</div>",
+
+    // внутренний шаблон для каждой записи
+    // по умолчанию: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>'
+    // тип: string
+    entryTemplate: '<p>{title}</p>',
+
+    // additional token definition for in-template-usage
+    // по умолчанию: {}
+    // тип: object/hash
+    tokens: {
+      foo: 'bar',
+      bar: function(entry, tokens) { return entry.title }
+    },
+
+    // форматировать дату с помощью moment.js (необязательно)
+    // по умолчанию: 'dddd MMM Do'
+    // тип: смотри справку http://momentjs.com/docs/#/displaying/
+    dateFormat: 'MMMM Do, YYYY',
+
+    // форматировать дату на свой выбор. (необязательно)
+    // эта функция возвращает форматированную дату.
+    // применяется, если нужно форматировать дату без moment.js.
+    // без использования moment.js и dateFormatFunction дата не будет форматироваться
+    // и будет появляться как в RSS
+    dateFormatFunction: function(date){},
+
+    // эффект, используемый для отображения записей ленты
+    // по умолчанию: 'show'
+    // тип: 'show', 'slide', 'slideFast', 'slideSynced', 'slideFastSynced'
+    effect: 'slideFastSynced',
+
+    // функция обратного вызова при ошибках
+    // по умолчанию: function() { throw new Error("jQuery RSS: url don't link to RSS-Feed") }
+    error: function(){},
+
+    // функция обратного вызова при успешной загрузке
+    // по умолчанию: function(){}
+    success: function(){},
+
+    // функция обратного вызова, которая срабатывает, когда данные были загружены, но до отображения
+    // полезно для отображения индикатора загрузки
+    onData: function(){}
+  },
+
+  // функция обратного вызова, которая срабатывает, после успешной загрузки и выполнения анимации
+  function callback() {}
+)
+ 
