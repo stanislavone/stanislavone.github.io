@@ -73,7 +73,8 @@ $(document).ready(function () {
         var count = r.response.count; // кол-во полученных фотографий
         var items = r.response.items; // массив с фотографиями
 
-        console.log(count, items);
+        console.log(count, items.photo_75);
+        
 
  
       });
