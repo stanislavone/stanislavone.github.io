@@ -76,6 +76,7 @@ $(document).ready(function () {
         // левой кнопкой мыши в любой точке карты.
         myMap.events.add('click', function (e) {
             let items = null; //обнуляем список
+            $("ul").empty();
                 var coords = e.get('coords'); //получаем координаты
 
                 //обрщаемся к ВК МЕТОДУ
