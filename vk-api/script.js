@@ -105,11 +105,5 @@ $(document).ready(function () {
     
     }
 
-    var stackedCard = new stackedCards({
-        selector: '.example',
-        layout: "fanOut",
-        transformOrigin: "bottom",
-   });
 
-   stackedCard.init();
 })
