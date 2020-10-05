@@ -77,6 +77,7 @@ $(document).ready(function () {
         // левой кнопкой мыши в любой точке карты.
         // При возникновении такого события откроем балун.
         myMap.events.add('click', function (e) {
+            let items = null;
             if (!myMap.balloon.isOpen()) {
                 var coords = e.get('coords');
                 console.log(coords);
@@ -84,13 +85,13 @@ $(document).ready(function () {
                 VK.Api.call(
                     'photos.search',
                     {
-                        count: 100,
-                        lat: coords[0],
-                        long: coords[1],
-                        radius: '1000',
+                        count: 10,
+                        lat: coords[0].toPrecision(6),
+                        long: coords[1].toPrecision(6),
+                        radius: '100',
                         v: '5.52',
                     }, function(r) {
-                        let items = r.response.items;
+                        items = r.response.items;
                         let count = r.response.count;
                         
                         for(let i = 0; i < count-1; i++) {
