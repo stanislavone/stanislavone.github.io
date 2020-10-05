@@ -4,3 +4,15 @@
     width: 400px;
     height: 400px;
 }
+
+
+      .embla {
+        overflow: hidden;
+      }
+      .embla__container {
+        display: flex;
+      }
+      .embla__slide {
+        position: relative;
+        min-width: 100%;
+      }
