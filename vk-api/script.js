@@ -74,6 +74,7 @@ $(document).ready(function () {
         var count = r.response.count; // кол-во полученных фотографий
         var items = r.response.items; // массив с фотографиями
         console.log(items);
+        console.log(count);
         for(let i = 0; i < count-1; i++) {
             console.log(items[i].photo_75, "4");
             $("ul").append("<img src="+items[i].photo_75+">");
