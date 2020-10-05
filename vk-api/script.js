@@ -89,7 +89,6 @@ $(document).ready(function () {
               long: '30',
               radius: '1000',
               v: '5.52',
-              sort: '1'
           }, function(r) {
               let items = r.response.items;
               let count = r.response.count;
