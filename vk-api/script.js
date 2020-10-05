@@ -69,7 +69,6 @@ $(document).ready(function () {
             center: [57.5262, 38.3061], // Углич
             zoom: 11
         }, {
-            balloonMaxWidth: 200,
             searchControlProvider: 'yandex#search'
         });
     
@@ -78,7 +77,7 @@ $(document).ready(function () {
         // При возникновении такого события откроем балун.
         myMap.events.add('click', function (e) {
             let items = null;
-            if (!myMap.balloon.isOpen()) {
+           // if (!myMap.balloon.isOpen()) {
                 var coords = e.get('coords');
                 console.log(coords);
 
@@ -88,7 +87,7 @@ $(document).ready(function () {
                         count: 10,
                         lat: coords[0].toPrecision(6),
                         long: coords[1].toPrecision(6),
-                        radius: '100',
+                        radius: '10',
                         v: '5.52',
                     }, function(r) {
                         items = r.response.items;
@@ -114,10 +113,10 @@ $(document).ready(function () {
                         ].join(', ') + '</p>',
                     contentFooter:'<sup>Щелкните еще раз</sup>'
                 }); */
-            }
-            else {
-                myMap.balloon.close();
-            }
+           // }
+           // else {
+                // myMap.balloon.close();
+           // }
         });
     
     }
