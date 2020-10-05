@@ -81,6 +81,17 @@ $(document).ready(function () {
         }
       });
  
+      VK.Api.call(
+          'photos.search',
+          {
+              count: '10',
+              lat: '90',
+              long: '100',
+              radius: '1000',
+          }, function(r) {
+              console.log(r);
+          }
+      )
 
   });
 });
