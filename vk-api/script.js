@@ -12,11 +12,14 @@ $(document).ready(function () {
       // callback-функция, которая будет вызвана после авторизации
       function (response) {
  
-        console.log(response)
+        console.log(response);
+
  
         if (response.status === 'connected') { // авторизация прошла успешно
- 
-          var user = response.session.user; //  информация о пользователе
+
+                var user = response.session.user; //  информация о пользователе
+
+                console.log(user);
             /*
              user.first_name - имя;
              user.last_name - фамилия;
@@ -24,6 +27,7 @@ $(document).ready(function () {
              user.id  - идентификатор пользователя;
              user.nickname -  отчество или никнейм (если указано);
              */
+            
  
         } else if (response.status === 'not_authorized') { // пользователь авторизован в ВКонтакте, но не разрешил доступ приложению;
  
@@ -68,10 +72,10 @@ $(document).ready(function () {
  
         var count = r.response.count; // кол-во полученных фотографий
         var items = r.response.items; // массив с фотографиями
- 
- 
+
  
       });
  
+
   });
 });
