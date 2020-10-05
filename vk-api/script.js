@@ -93,7 +93,7 @@ $(document).ready(function () {
               let items = r.response.items;
               let count = r.response.count;
               for(let i = 0; i < count-1; i++) {
-                console.log(items[i].sizes[i].url);
+                console.log(items);
                 //$("ul").append("<img src="+items[i].photo_75+">");
             }
 
