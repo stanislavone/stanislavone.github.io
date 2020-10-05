@@ -74,12 +74,11 @@ $(document).ready(function () {
     
         // Обработка события, возникающего при щелчке
         // левой кнопкой мыши в любой точке карты.
-        // При возникновении такого события откроем балун.
         myMap.events.add('click', function (e) {
-            let items = null;
-                var coords = e.get('coords');
-                console.log(coords);
+            let items = null; //обнуляем список
+                var coords = e.get('coords'); //получаем координаты
 
+                //обрщаемся к ВК МЕТОДУ
                 VK.Api.call(
                     'photos.search',
                     {
