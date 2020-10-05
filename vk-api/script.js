@@ -104,4 +104,12 @@ $(document).ready(function () {
         });
     
     }
+
+    var stackedCard = new stackedCards({
+        selector: '.mycards',
+        layout: "slide",
+        transformOrigin: "center",
+   });
+
+   stackedCard.init();
 })
