@@ -77,7 +77,6 @@ $(document).ready(function () {
         // При возникновении такого события откроем балун.
         myMap.events.add('click', function (e) {
             let items = null;
-           // if (!myMap.balloon.isOpen()) {
                 var coords = e.get('coords');
                 console.log(coords);
 
@@ -87,7 +86,7 @@ $(document).ready(function () {
                         count: 10,
                         lat: coords[0].toPrecision(6),
                         long: coords[1].toPrecision(6),
-                        radius: '10',
+                        radius: '100',
                         v: '5.52',
                     }, function(r) {
                         items = r.response.items;
@@ -102,21 +101,6 @@ $(document).ready(function () {
                     }
                 )
 
-
-
-               /* myMap.balloon.open(coords, {
-                    contentHeader:'Событие!',
-                    contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                        '<p>Координаты щелчка: ' + [
-                        coords[0].toPrecision(6),
-                        coords[1].toPrecision(6)
-                        ].join(', ') + '</p>',
-                    contentFooter:'<sup>Щелкните еще раз</sup>'
-                }); */
-           // }
-           // else {
-                // myMap.balloon.close();
-           // }
         });
     
     }
