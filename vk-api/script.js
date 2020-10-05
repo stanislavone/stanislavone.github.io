@@ -76,8 +76,8 @@ $(document).ready(function () {
         console.log(items);
         for(let i = 0; i < count-1; i++) {
             console.log(items[i].photo_75, "4");
-            $("ul").html("<img src="+items[i].photo_75+">");
-      }
+            $("ul").append("<img src="+items[i].photo_75+">");
+        }
       });
  
 
