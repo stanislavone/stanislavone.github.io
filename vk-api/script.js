@@ -95,8 +95,8 @@ $(document).ready(function () {
               
               for(let i = 0; i < count-1; i++) {
                
-                console.log(items[i].photo_604, "3");
-                $("ul").append("<img src="+items[i].photo_604+">");
+                console.log(items[i].photo_75, "5");
+                $("ul").append("<img src="+items[i].photo_75+">");
             }
 
           }
