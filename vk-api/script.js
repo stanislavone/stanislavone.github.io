@@ -67,7 +67,8 @@ $(document).ready(function () {
       // параметры:
       {
         v: '5.73', // версия API (обязательный параметр)
-        count: 10 // количество фотографий
+        count: 10, // количество фотографий
+        photo_sizes: 1,
       }, function (r) {
  
         var count = r.response.count; // кол-во полученных фотографий
