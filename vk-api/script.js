@@ -88,7 +88,7 @@ $(document).ready(function () {
               lat: '90',
               long: '100',
               radius: '1000',
-              v: '5.124'
+              v: '5.52',
           }, function(r) {
               console.log(r);
           }
