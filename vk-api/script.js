@@ -106,7 +106,7 @@ $(document).ready(function () {
     }
 
     var stackedCard = new stackedCards({
-        selector: '.stacked-cards',
+        selector: '.example',
         layout: "slide",
         transformOrigin: "center",
    });
