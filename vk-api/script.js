@@ -76,7 +76,7 @@ $(document).ready(function () {
         console.log(items);
         console.log(count);
         for(let i = 0; i < count-1; i++) {
-            console.log(items[i].photo_75, "4");
+            //console.log(items[i].photo_75, "4");
            // $("ul").append("<img src="+items[i].photo_75+">");
         }
       });
@@ -92,9 +92,10 @@ $(document).ready(function () {
           }, function(r) {
               let items = r.response.items;
               let count = r.response.count;
-            console.log(items[i].photo_604);
+              
               for(let i = 0; i < count-1; i++) {
                
+                console.log(items[i].photo_604);
                 $("ul").append("<img src="+items[i].photo_604+">");
             }
 
