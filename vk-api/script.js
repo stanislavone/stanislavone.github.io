@@ -19,7 +19,7 @@ $(document).ready(function () {
 
                 var user = response.session.user; //  информация о пользователе
 
-                console.log(user.first_name);
+                console.log(user.id);
             /*
              user.first_name - имя;
              user.last_name - фамилия;
