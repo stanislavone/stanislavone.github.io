@@ -68,13 +68,13 @@ $(document).ready(function () {
       {
         v: '5.73', // версия API (обязательный параметр)
         count: 10, // количество фотографий
-        photo_sizes: 1,
+        //photo_sizes: 1,
       }, function (r) {
  
         var count = r.response.count; // кол-во полученных фотографий
         var items = r.response.items; // массив с фотографиями
 
-        console.log(items.sizes);
+        console.log(items.photo_75);
         
       });
  
