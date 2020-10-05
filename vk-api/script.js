@@ -84,13 +84,19 @@ $(document).ready(function () {
       VK.Api.call(
           'photos.search',
           {
-              count: '10',
+              count: 10,
               lat: '90',
               long: '100',
               radius: '1000',
               v: '5.52',
           }, function(r) {
-              console.log(r);
+              let items = r.response.items;
+              let count = r.response.count;
+              for(let i = 0; i < count-1; i++) {
+                console.log(items[i].sizes[i].url);
+                //$("ul").append("<img src="+items[i].photo_75+">");
+            }
+
           }
       )
 
