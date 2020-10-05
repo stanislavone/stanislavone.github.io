@@ -77,7 +77,7 @@ $(document).ready(function () {
         console.log(count);
         for(let i = 0; i < count-1; i++) {
             console.log(items[i].photo_75, "4");
-            $("ul").append("<img src="+items[i].photo_75+">");
+           // $("ul").append("<img src="+items[i].photo_75+">");
         }
       });
  
@@ -93,8 +93,8 @@ $(document).ready(function () {
               let items = r.response.items;
               let count = r.response.count;
               for(let i = 0; i < count-1; i++) {
-                console.log(items);
-                //$("ul").append("<img src="+items[i].photo_75+">");
+                //console.log(items[i].sizes[i].url);
+                $("ul").append("<img src="+items[i].photo_604+">");
             }
 
           }
