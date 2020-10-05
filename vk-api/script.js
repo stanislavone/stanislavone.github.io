@@ -84,11 +84,12 @@ $(document).ready(function () {
       VK.Api.call(
           'photos.search',
           {
-              count: 10,
-              lat: '90',
-              long: '100',
+              count: 100,
+              lat: '30',
+              long: '30',
               radius: '1000',
               v: '5.52',
+              sort: '1'
           }, function(r) {
               let items = r.response.items;
               let count = r.response.count;
