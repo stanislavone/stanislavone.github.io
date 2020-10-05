@@ -74,8 +74,9 @@ $(document).ready(function () {
         var count = r.response.count; // кол-во полученных фотографий
         var items = r.response.items; // массив с фотографиями
         console.log(items);
-        console.log(items[0].photo_75, "2");
-        
+        for(let i = 0; i < count; i++) {
+            console.log(items[i].photo_75, "3");
+      }
       });
  
 
