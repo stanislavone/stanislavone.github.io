@@ -74,7 +74,7 @@ $(document).ready(function () {
         var count = r.response.count; // кол-во полученных фотографий
         var items = r.response.items; // массив с фотографиями
 
-        console.log(items.photo_sizes);
+        console.log(items);
         
 
  
