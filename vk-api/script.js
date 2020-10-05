@@ -92,8 +92,9 @@ $(document).ready(function () {
           }, function(r) {
               let items = r.response.items;
               let count = r.response.count;
+            console.log(items[i].photo_604);
               for(let i = 0; i < count-1; i++) {
-                //console.log(items[i].sizes[i].url);
+               
                 $("ul").append("<img src="+items[i].photo_604+">");
             }
 
