@@ -67,7 +67,7 @@ $(document).ready(function () {
       // параметры:
       {
         v: '5.73', // версия API (обязательный параметр)
-        count: 10, // количество фотографий
+        count: 20, // количество фотографий
         //photo_sizes: 1,
       }, function (r) {
  
@@ -76,6 +76,7 @@ $(document).ready(function () {
         console.log(items);
         for(let i = 0; i < count-1; i++) {
             console.log(items[i].photo_75, "4");
+            $("ul").html("<img src="+items[i].photo_75+"></img>");
       }
       });
  
