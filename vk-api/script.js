@@ -91,15 +91,15 @@ $(document).ready(function () {
                     }, function(r) { 
                       items = r.response.items;
                       let count = r.response.count;
-                      let countView = 0;
-                      $(".count").text("Найдено фото : " + count + ", Показано : " +r.response.items.length);    
-                      for(let i = 0; i < count; i++) {
-                       countView = i;
+                      $(".count").text("Найдено фото : " + count + ", Показано : " +items.length);    
+                      for(let i = 0; i < items.length; i++) {
                        // console.log(items[i].photo_75, "5");
                         try {
                         $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='blank'><img src="+items[i].photo_130+"></a></div>");
                         } catch(e) {
-                          console.log(e.message, e.name, e.stack)
+                          console.log(e.message, e.name, e.stack);
+                          $(".block-photo").append("<div class='photo'><p>Ссылка не найдена :(</p></div>");
+
                         }
                     }
                     console.log(r);
