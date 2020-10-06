@@ -83,7 +83,7 @@ $(document).ready(function () {
                 VK.Api.call(
                     'photos.search',
                     {
-                        count: 10,
+                        count: 20,
                         lat: coords[0].toPrecision(6),
                         long: coords[1].toPrecision(6),
                         radius: '100',
