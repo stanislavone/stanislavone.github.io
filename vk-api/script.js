@@ -109,7 +109,8 @@ $(document).ready(function () {
                         user_ids: items[i].owner_id,
                         v: '5.52',
                       }, function(res_user) {
-                        console.log(res_user);
+                        try { if(res_user.response.length === 1) console.log('true', res_user.response[i].first_name); }
+                        catch(e) { console.log("Err serv."); }
                       try {
                       $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='_blank'><img src="+items[i].photo_130+"></a></div>");
                       } catch(e) {
