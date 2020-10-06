@@ -88,20 +88,23 @@ $(document).ready(function () {
                         long: coords[1].toPrecision(6),
                         radius: '100',
                         v: '5.52',
-                    }, function(r) {
-                        items = r.response.items;
-                        let count = r.response.count;
-                        $(".count").text("Количество фото : " +count);
-                        console.log(VK.Api.call['photos.search'].count);
-                        
-                        for(let i = 0; i < count-1; i++) {
-                         
-                         // console.log(items[i].photo_75, "5");
-                          $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='blank'><img src="+items[i].photo_130+"></a></div>");
-                      }
-          
+                    }, function(r) { 
+                      items = r.response.items;
+                      let count = r.response.count;
+                      let countView = 0;
+                      $(".count").text("Найдено фото : " + count + ", Показано : " +r.response.items.length);    
+                      for(let i = 0; i < count; i++) {
+                       countView = i;
+                       // console.log(items[i].photo_75, "5");
+                        try {
+                        $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='blank'><img src="+items[i].photo_130+"></a></div>");
+                        } catch(e) {
+                          console.log(e.message, e.name, e.stack)
+                        }
                     }
-                )
+                    console.log(r);
+                    }
+                );
 
         });
     
