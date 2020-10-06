@@ -8,3 +8,11 @@ img { padding: 10px; }
 ::-webkit-scrollbar-thumb:hover { background-color: rgb(86, 153, 159); }
 ::-webkit-resizer { background-image: url(""); background-repeat: no-repeat; width: 4px; height: 0px; }
 ::-webkit-scrollbar { width: 1px; height: 13px;}
+
+.ymaps-2-1-77-balloon {
+  border-radius: 53px;
+}
+
+.ymaps-2-1-77-balloon__layout {
+  border-radius: 53px;
+}
