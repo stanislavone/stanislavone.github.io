@@ -94,7 +94,7 @@ $(document).ready(function () {
                         count: 20,
                         lat: coords[0].toPrecision(6),
                         long: coords[1].toPrecision(6),
-                        radius: '100',
+                        radius: '50',
                         v: '5.52',
                     }, function(r) { 
                       items = r.response.items;
