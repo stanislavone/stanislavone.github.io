@@ -91,6 +91,7 @@ $(document).ready(function () {
                     }, function(r) {
                         items = r.response.items;
                         let count = r.response.count;
+                        $(".count").append("Количество фото : " +count);
                         
                         for(let i = 0; i < count-1; i++) {
                          
