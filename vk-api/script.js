@@ -104,7 +104,7 @@ $(document).ready(function () {
                       for(let i = 0; i < items.length; i++) {
                        // console.log(items[i].photo_75, "5");
                         try {
-                        $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='_blank'><img src="+items[i].photo_130+"></a><br><a href="+items[i].owner_id+">Страница</a></div>");
+                        $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='_blank'><img src="+items[i].photo_130+"></a></div>");
                         } catch(e) {
                           console.log(e.message, e.name, e.stack);
                           $(".block-photo").append("<div class='photo'><p>Ссылка не найдена :(</p></div>");
