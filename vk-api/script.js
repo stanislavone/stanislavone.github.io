@@ -92,6 +92,7 @@ $(document).ready(function () {
                         items = r.response.items;
                         let count = r.response.count;
                         $(".count").text("Количество фото : " +count);
+                        console.log(VK.Api.call['photos.search'].count);
                         
                         for(let i = 0; i < count-1; i++) {
                          
