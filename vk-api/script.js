@@ -79,7 +79,14 @@ $(document).ready(function () {
             let items = null; //обнуляем список
             $(".block-photo").empty();
                 var coords = e.get('coords'); //получаем координаты
-
+                //Open Balloon
+                myMap.balloon.open(coords, {
+                  contentHeader:'<p>Координаты - ' + [
+                      coords[0].toPrecision(6),
+                      coords[1].toPrecision(6)
+                      ].join(', ') + '</p>',
+                 // contentFooter:'<sup>Щелкните еще раз</sup>'
+              });
                 //обрщаемся к ВК МЕТОДУ
                 VK.Api.call(
                     'photos.search',
