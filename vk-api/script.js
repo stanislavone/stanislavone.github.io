@@ -89,30 +89,39 @@ $(document).ready(function () {
               });
                 //обрщаемся к ВК МЕТОДУ
                 VK.Api.call(
-                    'photos.search',
-                    {
-                        count: 20,
-                        lat: coords[0].toPrecision(6),
-                        long: coords[1].toPrecision(6),
-                        radius: '50',
+                  'photos.search',
+                  {
+                      count: 20,
+                      lat: coords[0].toPrecision(6),
+                      long: coords[1].toPrecision(6),
+                      radius: '50',
+                      v: '5.52',
+                  }, function(r) { 
+                    items = r.response.items;
+                    let count = r.response.count;
+                    $("#count").text(count);
+                    $("#len").text(items.length);                         
+                    for(let i = 0; i < items.length; i++) {
+                     console.log(items[i].owner_id);
+                     VK.Api.call(
+                      'users.get',
+                      {
+                        user_ids: items[i].owner_id,
                         v: '5.52',
-                    }, function(r) { 
-                      items = r.response.items;
-                      let count = r.response.count;
-                      $("#count").text(count);
-                      $("#len").text(items.length);    
-                      for(let i = 0; i < items.length; i++) {
-                       // console.log(items[i].photo_75, "5");
-                        try {
-                        $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='_blank'><img src="+items[i].photo_130+"></a></div>");
-                        } catch(e) {
-                          console.log(e.message, e.name, e.stack);
-                          $(".block-photo").append("<div class='photo'><p>Ссылка не найдена :(</p></div>");
+                      }, function(res_user) {
+                        console.log(res_user);
+                      try {
+                      $(".block-photo").append("<div class='photo'><a href="+items[i].photo_1280+" target='_blank'><img src="+items[i].photo_130+"></a></div>");
+                      } catch(e) {
+                        console.log(e.message, e.name, e.stack);
+                        $(".block-photo").append("<div class='photo'><p>Ссылка не найдена :(</p></div>");
 
-                        }
-                    }
-                    console.log(r);
-                    }
+                      }
+                      })
+                  }
+
+                  console.log(r);
+                  }
                 );
 
         });
