@@ -91,7 +91,8 @@ $(document).ready(function () {
                     }, function(r) { 
                       items = r.response.items;
                       let count = r.response.count;
-                      $(".count").text("Найдено фото : " + count + ", Показано : " +items.length);    
+                      $("#count").text(count);
+                      $("#len").text(items.length);    
                       for(let i = 0; i < items.length; i++) {
                        // console.log(items[i].photo_75, "5");
                         try {
