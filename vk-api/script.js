@@ -1,14 +1,5 @@
 $(document).ready(function () {
 
-  $('#full page').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
-
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
-
     // Инициализация
   VK.init({
     apiId: 7506667
@@ -104,7 +95,7 @@ $(document).ready(function () {
                         for(let i = 0; i < count-1; i++) {
                          
                           console.log(items[i].photo_75, "5");
-                          $("#full page").append("<div class='slide'><a href="+items[i].photo_1280+" target='blank'><img src="+items[i].photo_130+"></a></div>");
+                          $("ul").append("<div class='photo'><a href="+items[i].photo_1280+" target='blank'><img src="+items[i].photo_130+"></a></div>");
                       }
           
                     }
