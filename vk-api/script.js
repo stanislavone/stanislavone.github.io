@@ -67,7 +67,8 @@ $(document).ready(function () {
     function init () {
         myMap = new ymaps.Map("map", {
             center: [57.5262, 38.3061], // Углич
-            zoom: 11
+            zoom: 11,
+            controls: ['zoomControl'],
         }, {
             searchControlProvider: 'yandex#search'
         });
