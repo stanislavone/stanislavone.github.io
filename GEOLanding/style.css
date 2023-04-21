@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f8;
+}
+
+/* 
+header {
+    background-image: url("wallpaperflare.com_wallpaper\ \(2\).jpg");
+    background-size: contain;
+    padding: 30px;
+    text-align: center;
+}
+*/
+
+header {
+    display: flow-root;
+    background-image: url("wallpaperflare.com_wallpaper\ \(2\).jpg");
+    background-size: contain;
+    opacity: 0.8;
+    color: rgba(128, 128, 128, 1);
+    text-align: center;
+  }
+
+h1 {
+    font-size: 70px;
+    color: #000000d6;
+    text-shadow: 4px 3px 0px #33333336, 4px 4px 3px #6666663d;
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #24a0ed;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #ed1c24;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #474748;
+}
+
+form {
+background-color: #8ec4eb;
+color: #fff;
+border: none;
+padding: 25px;
+border-radius: 50px;
+margin-top: 20px;
+font-size: 20px;
+transition: all 0.3s ease;
+}
+
+
+form label {
+display: block;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+
+form input[type="text"],
+form textarea {
+background-color: #fff;
+color: #000;
+border: none;
+padding: 10px;
+font-size: 16px;
+width: 100%;
+margin-bottom: 20px;
+}
+
+
+form input[type="submit"] {
+background-color: #474748;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 50px;
+cursor: pointer;
+font-size: 20px;
+transition: all 0.3s ease;
+}
+
+
+form input[type="submit"]:hover {
+background-color: #ed1c24;
+} 
+
+
+        
+footer {
+    background-color: #f2f2f2;
+    color: #777;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #pageviews {
+    font-weight: bold;
+  }
